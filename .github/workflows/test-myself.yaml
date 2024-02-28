@@ -1,0 +1,40 @@
+name: Test `generate-array` action
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-generate-array:
+    runs-on: [ 'ubuntu-latest' ]
+    name: Test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Test
+        id: test
+        uses: ./
+        with:
+          length: 2
+          startIndex: 1
+          template: 'page={{index}}'
+      - name: Check
+        run: |
+          echo "${{ steps.test.outputs.result }}"
+          test "${{ steps.test.outputs.result }}" = "[page=1]"
+  demonstrate:
+    runs-on: [ 'ubuntu-latest' ]
+    name: Demonstration
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Demonstration
+        id: demo
+        uses: ./
+        with:
+          length: 10
+          startIndex: 1
+          template: '$item-{{index}}'
+      - name: Demonstrate
+        run: |
+          echo "${{ steps.demo.outputs.result }}"

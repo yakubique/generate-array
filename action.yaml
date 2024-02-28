@@ -1,0 +1,21 @@
+name: "Generate JSON array"
+description: "Generate JSON array of length"
+author: Vladimir Levin
+branding:
+  icon: code
+  color: purple
+inputs:
+  length:
+    description: Array length
+    required: true
+  template:
+    description: 'By default array values are indexes, can be customized with template. Example: "item-{{index}}"'
+  startIndex:
+    description: "What should be first index (default: 0)"
+    default: '0'
+outputs:
+  result:
+    description: Result array
+runs:
+  using: 'node20'
+  main: 'action/index.js'
