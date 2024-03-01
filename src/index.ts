@@ -21,6 +21,10 @@ const setOutputs = buildOutput(Outputs);
         }
 
         for (let i = startIndex; i < inputs.length; i++) {
+            if ((inputs.positiveOnly && i < 0) || (inputs.negativeOnly && i > 0)) {
+                continue;
+            }
+
             if (inputs.template) {
                 result.push(
                     (inputs.template as string)

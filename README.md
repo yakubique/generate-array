@@ -10,7 +10,7 @@ Generate JSON array of length
 ```yaml
 - name: Generate Array
   id: list
-  uses: yakubique/generate-array@v1
+  uses: yakubique/generate-array@v1.1
   with:
     length: 10
     startIndex: 1
@@ -23,11 +23,13 @@ Generate JSON array of length
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|   INPUT    |  TYPE  | REQUIRED | DEFAULT |                                               DESCRIPTION                                                |
-|------------|--------|----------|---------|----------------------------------------------------------------------------------------------------------|
-|   length   | string |   true   |         |                                               Array length                                               |
-| startIndex | string |  false   |  `"0"`  |                                 What should be first index (default: 0)                                  |
-|  template  | string |  false   |         | By default array values are indexes, <br>can be customized with template. Example: <br>"item-{{index}}"  |
+|    INPUT     |  TYPE  | REQUIRED |  DEFAULT  |                                               DESCRIPTION                                                |
+|--------------|--------|----------|-----------|----------------------------------------------------------------------------------------------------------|
+|    length    | string |   true   |           |                                               Array length                                               |
+| negativeOnly | string |  false   | `"false"` |                                       Return only negative values                                        |
+| positiveOnly | string |  false   | `"false"` |                                       Return only positive values                                        |
+|  startIndex  | string |  false   |   `"0"`   |                                 What should be first index (default: 0)                                  |
+|   template   | string |  false   |           | By default array values are indexes, <br>can be customized with template. Example: <br>"item-{{index}}"  |
 
 <!-- AUTO-DOC-INPUT:END -->
 

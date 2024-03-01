@@ -13,6 +13,12 @@ inputs:
   startIndex:
     description: "What should be first index (default: 0)"
     default: '0'
+  positiveOnly:
+    description: "Return only positive values"
+    default: 'false'
+  negativeOnly:
+    description: "Return only negative values"
+    default: 'false'
 outputs:
   result:
     description: Result array
