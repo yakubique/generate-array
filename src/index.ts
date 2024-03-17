@@ -1,4 +1,4 @@
-import { buildOutput } from '@yakubique/atils/dist';
+import { buildOutput, outputJson } from '@yakubique/atils/dist';
 import * as core from '@actions/core';
 import { ActionInputs, getInputs } from './io-helper';
 
@@ -39,7 +39,7 @@ const setOutputs = buildOutput(Outputs);
         }
 
         setOutputs({
-            result
+            result: outputJson(result, inputs.toFile)
         });
         core.info('Success!');
     } catch (err: any) {

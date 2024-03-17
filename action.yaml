@@ -19,6 +19,9 @@ inputs:
   negativeOnly:
     description: "Return only negative values"
     default: 'false'
+  to_file:
+    description: Save result to file
+    default: 'false'
 outputs:
   result:
     description: Result array

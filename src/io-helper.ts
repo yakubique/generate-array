@@ -5,7 +5,8 @@ enum Inputs {
     Template = 'template',
     StartIndex = 'startIndex',
     PositiveOnly = 'positiveOnly',
-    NegativeOnly = 'negativeOnly'
+    NegativeOnly = 'negativeOnly',
+    ToFile = 'to_file',
 }
 
 export interface ActionInputs {
@@ -14,6 +15,7 @@ export interface ActionInputs {
     template: string | null;
     positiveOnly: boolean;
     negativeOnly: boolean;
+    toFile: boolean;
 }
 
 export function getInputs(): ActionInputs {
@@ -25,6 +27,8 @@ export function getInputs(): ActionInputs {
 
     result.positiveOnly = getBooleanInput(Inputs.PositiveOnly, { required: false });
     result.negativeOnly = getBooleanInput(Inputs.NegativeOnly, { required: false });
+
+    result.toFile = getBooleanInput(Inputs.ToFile, { required: false });
 
     return result;
 }

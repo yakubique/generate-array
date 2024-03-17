@@ -30,6 +30,7 @@ Generate JSON array of length
 | positiveOnly | string |  false   | `"false"` |                                       Return only positive values                                        |
 |  startIndex  | string |  false   |   `"0"`   |                                 What should be first index (default: 0)                                  |
 |   template   | string |  false   |           | By default array values are indexes, <br>can be customized with template. Example: <br>"item-{{index}}"  |
+|   to_file    | string |  false   | `"false"` |                                           Save result to file                                            |
 
 <!-- AUTO-DOC-INPUT:END -->
 
