@@ -13,7 +13,7 @@ Generate JSON array of length
 ```yaml
 - name: Generate Array
   id: list
-  uses: yakubique/generate-array@v1.2
+  uses: yakubique/generate-array@v1.3
   with:
     length: 10
     startIndex: 1
