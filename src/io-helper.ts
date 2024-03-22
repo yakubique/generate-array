@@ -1,6 +1,6 @@
 import { getBooleanInput, getNumberInput, getOptional } from '@yakubique/atils/dist';
 
-enum Inputs {
+export enum Inputs {
     Length = 'length',
     Template = 'template',
     StartIndex = 'startIndex',
@@ -19,7 +19,7 @@ export interface ActionInputs {
 }
 
 export function getInputs(): ActionInputs {
-    const result: ActionInputs | any = {};
+    const result: ActionInputs = {} as ActionInputs;
 
     result.length = getNumberInput(Inputs.Length, { required: true });
     result.startIndex = getNumberInput(Inputs.StartIndex, { required: false });

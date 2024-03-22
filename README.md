@@ -1,8 +1,11 @@
 # Generate Array
 
+[![Coverage](./badges/coverage.svg)](./badges/coverage.svg)
+[![Test `generate-array` action](https://github.com/yakubique/generate-array/actions/workflows/test-myself.yaml/badge.svg)](https://github.com/yakubique/generate-array/actions/workflows/test-myself.yaml)
+
+
 Generate JSON array of length
 
-[![Test `generate-array` action](https://github.com/yakubique/generate-array/actions/workflows/test-myself.yaml/badge.svg)](https://github.com/yakubique/generate-array/actions/workflows/test-myself.yaml)
 
 [Usage workflow](https://github.com/yakubique/generate-array/actions/workflows/test-myself.yaml)
 
@@ -10,7 +13,7 @@ Generate JSON array of length
 ```yaml
 - name: Generate Array
   id: list
-  uses: yakubique/generate-array@v1.1
+  uses: yakubique/generate-array@v1.2
   with:
     length: 10
     startIndex: 1
